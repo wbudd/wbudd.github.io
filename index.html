@@ -15,9 +15,9 @@
 		<link href="./_app/immutable/chunks/DfvQ8UF7.js" rel="modulepreload">
 		<link href="./_app/immutable/chunks/Bs7LB4Bv.js" rel="modulepreload">
 		<link href="./_app/immutable/chunks/DYrviY11.js" rel="modulepreload">
-		<link href="./_app/immutable/entry/app.DmvKgPCv.js" rel="modulepreload">
+		<link href="./_app/immutable/entry/app.BXnCgr4T.js" rel="modulepreload">
 		<link href="./_app/immutable/nodes/0.Dx1nYAmF.js" rel="modulepreload">
-		<link href="./_app/immutable/nodes/2.CS4BOR7p.js" rel="modulepreload">
+		<link href="./_app/immutable/nodes/2.eS1d904B.js" rel="modulepreload">
 		
 		<link href="./_app/immutable/assets/2.DfrlrOW-.css" rel="stylesheet">
 	</head>
@@ -26,16 +26,16 @@
 			
 			<script>
 				{
-					__sveltekit_13excxq = {
+					__sveltekit_122ni67 = {
 						base: new URL(".", location).pathname.slice(0, -1),
-						version: "1795331575421"
+						version: "1795337939545"
 					};
 
 					const element = document.currentScript.parentElement;
 
 					import("./_app/immutable/entry/start.CnLgLpvT.js").then(async (kit) => {
-						kit.init(__sveltekit_13excxq);
-						const app = await import("./_app/immutable/entry/app.DmvKgPCv.js");
+						kit.init(__sveltekit_122ni67);
+						const app = await import("./_app/immutable/entry/app.BXnCgr4T.js");
 						kit.start(app, element, {
 							node_ids: [0, 2],
 							data: [{type:"data",data:null,uses:{}},null],
@@ -43,6 +43,18 @@
 							error: null
 						});
 					});
+
+					if ('serviceWorker' in navigator) {
+						const script_url = './service-worker.js';
+						const policy = globalThis?.window?.trustedTypes?.createPolicy(
+							'sveltekit-trusted-url',
+							{ createScriptURL(url) { return url; } }
+						);
+						const sanitised = policy?.createScriptURL(script_url) ?? script_url;
+						addEventListener('load', function () {
+							navigator.serviceWorker.register(sanitised, { type: 'module' });
+						});
+					}
 				}
 			</script>
 		</div>
